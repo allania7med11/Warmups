@@ -1,66 +1,76 @@
-# warmUp - cohort 12
+# Warmups Cohort12
+## 1. Fork :twisted_rightwards_arrows:
+From the organization, click on the fork button at the top right corner.
 
-When using different machine
-Always .. don’t forget to erase Git credentials from mac:
+![alt text][fork]
 
-1. check for the last name and email by the commands:
+[fork]: https://i.imgur.com/krIm9jT.png
 
-git config --global user.name
-git config --global user.email
+## 2.Clone
+#### 1. Get the Link of the repo
+From you GitHub account, find the forker repository and copy its link by clicking on the green button.
 
-2. delete the last credentials for that username and email by the commands:
-   git config --global --unset user.name "the appeared username"
-   git config --global --unset user.email "the appeared email"
+![alt text][clone]
 
-3. on Mac desktop search for “keychain”, search for any Github account and delete it.
+[clone]: https://i.imgur.com/M4wA185.png
 
-First time work
-1.Fork the required warm up repo ( check slack to see link ).
+#### 2. Cloning the fork to your machine
+So far, the forked repository only exists on GitHub. In order to work on the warmups, you will need to clone the repository to your machine.
 
-2. From your Terminal, clone the _forked_ repo to your local Desktop, (you can find it in your Github repositories).
-   git clone https://github.com/<<UserName>>/<<Repo Name>>
-3. From your terminal, Navigate to _the forked repo_.
-   cd warmUp
-   4.Create a new remote locally by running this command in your terminal:
-   git remote add TheRemoteName RepoLinkHere
-   example:
-   git remote add remote https://github.com/rbk-org/warmUp
-4. Read the question, solve it, and save.
-5. Use git status to check the changed files.
-   git status
-6. Stage the changes of the file.
-   git add fileName.js
-7. Commit your changes
-   git commit -m “yourMessage”
-8. Push your code to your GitHub account
-   git push origin master
-   10.share your solution with the administration, from your forked repo in your Github account, select Pull Requests and then click on create a New pull request.
-   12.STOP. Before you Click to create a pull request for this comparison you must adjust the target branch (aka base branch) to be your username. Once changed, the pull-request heading should look like this:
-   _rbk:username ... username:master_
-9. Click Send pull request
+Open your terminal and clone the repository on your local machine:
+```
+# Clone your fork to your local machine
+git clone <repo_link>
+```
+## 3. Work on your warmups
+After cloning succesfully, navigate to the new cloned folder and start working on the warmups using your favorite text editor. Make sure to test your solution using your browser's console.
 
-Daily work
+## 4. Pushing your work
+#### 1. Stage and commit
+When finished with the exercice, you must stage the changes using `add` and commit them using `commit`.
+Open your terminal and type the following commands:
+```
+# Staging your changes
+git add .
 
-1. If you are using our mac DELETE the Warmup folder from the Desktop
-2. Check the git conf
+# Commit your changes
+git commit -m "YOUR_GIT_COMMIT_MESSAGE"
+```
+#### 2. Push
+Now, you need to push your work to your GitHub repository using the `push` command
+In your terminal type the following:
+```
+# Push you work
+git push origin master
+```
+## 5. Create a Pull Request
+Navigate back to the forked repository on your GitHub account, from the top menu click on *Pull requests* and make sure to **change the base branch from master to your branch that has your name**
 
-If you are using a different machine, repeat the steps mentioned above (without forking again ).
+![alt text][pr]
 
-2. Get the new daily warm up by pulling it from the remote.
-   git pull yourRemoteName master
-   Note: if you can’t remember your remote name, use the following command to know
-   git remote -v
-3. Read the new warm up exercise, solve it, and save.
-4. Use git status to check the changed files.
-   git status
-5. Stage the changes of the file.
-   git add fileName.js
-6. Commit your changes
-   git commit -m “yourMessage”
-7. Push your code to your GitHub account
-   git push origin master
-   7.share your solution with the administration, from your forked repo in your Github account, select Pull Requests and then click on create a New pull request.
-   8.STOP. Before you Click to create a pull request for this comparison you must adjust the target branch (aka base branch) to be your username. Once changed, the pull-request heading should look like this:
-   _rbk:username ... username:master_
-8. Click Send pull request
-9. You are all done.
+[pr]: https://i.imgur.com/1d8WKMU.png
+
+## 6. Update your local repository
+Everyday, your going to have to work on a new warmup, to make sure that your cloned repository is up to date, each day when we announce a new warmup to must `pull` the updates from the organization repo. To do so you need to do the following:
+#### 1. Make sure that you have the required remotes
+Open your terminal and type
+```
+git remote -v
+```
+You must see two remotes. If you only see something like this:
+![alt text][remote]
+
+[remote]: https://i.imgur.com/UcJByoN.png
+Then you must add the organization's repo to your work.
+Navigate to your warmup folder and open your terminal and paste the following:
+```
+# Add the upstream remote to your project
+git remote add upstream https://github.com/hackreactor/rbktn12-warmups.git
+```
+#### 2. Update your remote
+Inside your warmup folder, open your terminal and use the `pull` command to get the new warmup.
+```
+# Pull the new warmup from the upstream
+git pull upstream master
+```
+You've successfully pulled the new warmup, happy hacking!
