@@ -1,4 +1,4 @@
-# warmUp - cohort 12
+# WarmUps - cohort 12
 
 When using different machine
 Always .. don’t forget to erase Git credentials from mac:
