@@ -1,4 +1,8 @@
 # Warmups Cohort12
-## 1. Fork :fa-code-fork:
+## 1. Fork :twisted_rightwards_arrows:
 From the orgonization, click on the fork button at the top right corner.
-insert image
+
+![alt text][fork]
+
+[fork]: https://i.imgur.com/krIm9jT.png
+
