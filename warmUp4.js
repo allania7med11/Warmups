@@ -3,4 +3,4 @@
 // example:    reverseStr('hello'); "o1l2l3e4h"
 
 // 2-write a function that takes array of strings and returns an array of the strings that have the same length
-// example :  ['hi','hello','welcome','hy'] == > ["hi","hy"]
+// example :  ['hi','hello','welcome','hy'] == > ["hi","hy"] 
